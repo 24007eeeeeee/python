@@ -1,1 +1,3 @@
-print("hellooo12/05/2025doublecheck")
+import sqlite3
+
+db = sqlite3.connect("SWfilms.db")
