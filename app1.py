@@ -15,8 +15,11 @@ def print_all_movie():
     cursor.execute(sql)
     results = cursor.fetchall()
     # loop through all the results
-    print(results)
+    for movie in results:
+        print(movie)
+    # loop finished here
     db.close
 
 # main code
 print_all_movie()
+
