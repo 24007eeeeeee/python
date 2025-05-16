@@ -16,10 +16,9 @@ def print_all_movie():
     results = cursor.fetchall()
     # loop through all the results
     for movie in results:
-        print(movie)
+        print(f"{movie[1]:<30}{movie[2]:<8}{movie[3]:<6}{movie[4]:<6}{movie[5]:<6}")
     # loop finished here
     db.close
 
 # main code
 print_all_movie()
-
