@@ -15,9 +15,9 @@ def print_all_movie():
     cursor.execute(sql)
     results = cursor.fetchall()
     # loop through all the results
-    print(f"id                            movie_name  director_id  duration_in_minutes  rating  box_office")
+    print("|movie_name                   |director_id |duration_in_minutes |rating |box_office ")
     for movie in results:
-        print(f"{movie[1]:<30}{movie[2]:<8}{movie[3]:<6}{movie[4]:<6}{movie[5]:<6}")
+        print(f"|{movie[1]:<30}{movie[2]:<13}{movie[3]:<21}{movie[4]:<8}{movie[5]:<25}")
     # loop finished here
     db.close
 
