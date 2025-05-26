@@ -18,10 +18,10 @@ def print_all_movie():
     # fetches all results
     results = cursor.fetchall()
     # loop through all the results
-    print("|movie_name                   |director_name |duration_in_minutes |rating |box_office ")
+    print("|movie_name                   |director_name       |duration_in_minutes       |rating       |box_office ")
     # prints table headings in a formatted way
     for movie in results:
-        print(f"|{movie[1]:<30}{movie[2]:<13}{movie[3]:<21}{movie[4]:<8}{movie[5]:<25}")
+       print(f"|{movie[1]:<30}{movie[2]:<21}{movie[3]:<27}{movie[4]:<14}{movie[5]:<25}")
     # loop finished here
     db.close
 
@@ -37,10 +37,10 @@ def print_all_movie_by_duration():
     # fetches all results
     results = cursor.fetchall()
     # loop through all the results
-    print("|movie_name                   |director_name |duration_in_minutes |rating |box_office ")
+    print("|movie_name                   |director_name       |duration_in_minutes       |rating       |box_office ")
     # prints table headings in a formatted way
     for movie in results:
-        print(f"|{movie[1]:<30}{movie[2]:<13}{movie[3]:<21}{movie[4]:<8}{movie[5]:<25}")
+       print(f"|{movie[1]:<30}{movie[2]:<21}{movie[3]:<27}{movie[4]:<14}{movie[5]:<25}")
     # loop finished here
     db.close
 
@@ -56,10 +56,10 @@ def print_all_movie_sorted_by_box_office():
     # fetches all results
     results = cursor.fetchall()
     # loop through all the results
-    print("|movie_name                   |director_name |duration_in_minutes |rating |box_office ")
+    print("|movie_name                   |director_name       |duration_in_minutes       |rating       |box_office ")
     # prints table headings in a formatted way
     for movie in results:
-        print(f"|{movie[1]:<30}{movie[2]:<13}{movie[3]:<21}{movie[4]:<8}{movie[5]:<25}")
+       print(f"|{movie[1]:<30}{movie[2]:<21}{movie[3]:<27}{movie[4]:<14}{movie[5]:<25}")
     # loop finished here
     db.close
 
