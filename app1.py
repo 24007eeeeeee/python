@@ -21,7 +21,7 @@ def print_all_movie():
     print("|movie_name                   |director_name       |duration_in_minutes       |rating       |box_office ")
     # prints table headings in a formatted way
     for movie in results:
-       print(f"|{movie[1]:<30}{movie[2]:<21}{movie[3]:<27}{movie[4]:<14}{movie[5]:<25}")
+       print(f" {movie[1]:<30}{movie[2]:<21}{movie[3]:<27}{movie[4]:<14}{movie[5]:<25}")
     # loop finished here
     db.close
 
@@ -31,7 +31,7 @@ def print_all_movie_by_duration():
     # connects to the database
     db = sqlite3.connect(DATABASE)
     cursor = db.cursor()
-    # sql query to select from movie in the order of duration_in_minutes
+    # sql query to select from movie in the order of duration
     sql = "SELECT * FROM movie ORDER BY duration_in_minutes DESC;"
     cursor.execute(sql)
     # fetches all results
@@ -40,7 +40,7 @@ def print_all_movie_by_duration():
     print("|movie_name                   |director_name       |duration_in_minutes       |rating       |box_office ")
     # prints table headings in a formatted way
     for movie in results:
-       print(f"|{movie[1]:<30}{movie[2]:<21}{movie[3]:<27}{movie[4]:<14}{movie[5]:<25}")
+       print(f" {movie[1]:<30}{movie[2]:<21}{movie[3]:<27}{movie[4]:<14}{movie[5]:<25}")
     # loop finished here
     db.close
 
@@ -50,7 +50,7 @@ def print_all_movie_sorted_by_box_office():
     # connects to the database
     db = sqlite3.connect(DATABASE)
     cursor = db.cursor()
-    # sql query to select from movie in the order of box_office
+    # sql query to select from movie in the order of box office
     sql = " SELECT * FROM movie ORDER BY box_office;"
     cursor.execute(sql)
     # fetches all results
@@ -59,7 +59,7 @@ def print_all_movie_sorted_by_box_office():
     print("|movie_name                   |director_name       |duration_in_minutes       |rating       |box_office ")
     # prints table headings in a formatted way
     for movie in results:
-       print(f"|{movie[1]:<30}{movie[2]:<21}{movie[3]:<27}{movie[4]:<14}{movie[5]:<25}")
+       print(f" {movie[1]:<30}{movie[2]:<21}{movie[3]:<27}{movie[4]:<14}{movie[5]:<25}")
     # loop finished here
     db.close
 
@@ -81,8 +81,9 @@ What would you like to do.
     elif user_input == "3":
         print_all_movie_sorted_by_box_office()
     elif user_input == "4":
-        # exit the loop and exits
+        # exits the loop then prints goodbye and then exits
+        print("May the force be with you!")
         break
-    # if user input not listed above then prints its not an option
+    # if user input not listed above then prints that it wasn't an option
     else:
         print("That was not an option\n")
